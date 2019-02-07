@@ -19,6 +19,7 @@ def apply_coupons(cart, coupons)
       if remainder.odd? = true
         cart[food][:count] = 1
         cart["#{food} W/ COUPON"] = coupons
+      end
     end
   end
   cart
