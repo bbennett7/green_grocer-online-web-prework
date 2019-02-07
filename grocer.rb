@@ -14,9 +14,14 @@ end
 
 def apply_coupons(cart, coupons)
   if cart[food] == coupons[:item]
-    if cart[food][:count] is odd
+    if cart[food][:count].odd? >= coupons[:num]
+      remainder = cart[food][:count] % coupons[:num]
+      if remainder.odd? = true
+        cart[food][:count] = 1
+        cart["#{food} W/ COUPON"] = coupons
     end
   end
+  cart
 end
 
 def apply_clearance(cart)
