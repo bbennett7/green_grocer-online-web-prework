@@ -13,16 +13,7 @@ def consolidate_cart(cart)
 end
 
 def apply_coupons(cart, coupon)
-  cart.each do |item, description_hash|
-    description_hash.each do |price, clearance, count|
-      if item == coupon[:item]
-        if count.to_i % 2 == 1
-          cart[item][:count] = 1
-          cart["#{item} W/ COUPON"][:price] = coupon[:cost]
-        end
-      end
-    end
-  end
+  
 end
 
 def apply_clearance(cart)
